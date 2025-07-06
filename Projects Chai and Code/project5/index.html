@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <h3>Tap start to change background-color continuous </h3>
+    <h3>Tap stop to stop changing background-color continuous </h3>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        const randomcolor = function(){
+            const hex = "0123456789ABCDEF";
+            let color = "#";
+            for(let i =0;i<6;i++){
+                color += hex[Math.floor(Math.random()*16)]
+                        // console.log(color)
+                        
+                    }
+            return color
+        }
+        // console.log(randomcolor());
+       let  id = null;
+        const start = function(){
+          document.querySelector("body").style.backgroundColor = randomcolor();
+            console.log("working" );
+        }
+        document.getElementById("start").addEventListener("click",function(){
+            if(id===null){
+               id = setInterval(start,1000)
+
+            }
+        })
+         document.getElementById("stop").addEventListener("click",function(){
+          clearInterval(id)
+          console.log("stopped")
+          id = null;
+        })
+    </script>
+</body>
+</html>
