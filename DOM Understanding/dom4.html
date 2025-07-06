@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body>
+       <ul class="language">
+        <li> javascript</li>
+
+       </ul>
+       <script> 
+        function addlanguage(langname){
+          const li =   document.createElement("li");
+          li.innerHTML = `${langname}`
+        document.querySelector(".language").appendChild(li)
+        }
+        addlanguage("python");
+        addlanguage("java");
+        addlanguage("c++");
+        function optimalWay(langname){
+            const li = document.createElement("li")
+                  li.appendChild(document.createTextNode(langname))
+                    document.querySelector(".language").appendChild(li)
+        }
+        optimalWay("c#");
+
+
+        // edit
+
+
+
+        const secondlang = document.querySelector("li:nth-child(2)")
+        // secondlang.innerHTML=   "mojo"
+        const newli = document.createElement("li")
+        newli.innerHTML = "mojo"
+        secondlang.replaceWith(newli)
+
+        const  firstlang = document.querySelector("li:first-child")
+        // firstlang.innerHTML = "mern"
+        // firstlang.outerHTML = "<li>mern</li>"
+        const lang  =  document.createElement("li")
+        lang.textContent = "mern"
+        firstlang.replaceWith(lang)
+
+
+        // remove  
+
+
+ const lastlang = document.querySelector("li:last-child")
+// lastlang.remove()
+
+               </script>
+</body>
+</html>
