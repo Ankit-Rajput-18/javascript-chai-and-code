@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project6</title>
+    <style>table {
+  width: 350px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+th {
+  background: #f7b731;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}kk</style>
+  </head>
+  <body style="background-color: antiquewhite">
+    <div class="project">
+      <div id="insert">
+        <div class="key">Press key and watch magic</div>
+      </div>
+    </div>
+    <script>
+      const insert = document.getElementById("insert");
+      window.addEventListener("keydown", (e) => {
+        insert.innerHTML = `<div class="color">
+            
+     <table>
+     <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+            </div>
+           `;
+      });
+    </script>
+  </body>
+</html>
