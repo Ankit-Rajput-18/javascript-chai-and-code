@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div style="margin-left: 30%;">
+            <label="a">Number 1:</label>
+            <input type="text" name="" id="a" placeholder="Enter first number" title="Enter first number">
+            <br>
+            <label for="b">Number 2:</label>
+            <input type="text" name="" id="b" placeholder="Enter second number" title="Enter second number">
+            <br>
+            <label for="c">Number 3:</label>
+            <input type="text" name="" id="c" placeholder="Enter third number" title="Enter third number">
+            <br>
+            <input type="submit" value="Add three number" onclick="twonumberadd()" >
+
+        </div>
+</head>
+
+<body>
+ <script>
+    function twonumberadd(){
+    let num1;
+    let num2;
+    let num3;
+    num1=parseFloat(document.getElementById("a").value);
+    num2=parseFloat(document.getElementById("b").value);
+    num3= parseFloat(document.getElementById("c").value);
+    let sum = num1 + num2 + num3;
+    alert("sum of three number is :" + sum);
+    }
+    </script>
+    </body>
+
+</html>
